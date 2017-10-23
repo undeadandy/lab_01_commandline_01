@@ -15,11 +15,11 @@ Follow the instructions line-by-line.
 ==========
 2. Create a directory called mtec1002.
 ----------
-
+mkdir mtec1002
 ==========
 3. Change your directory so that you're in mtec1002.
 ----------
-
+cd mtec1002
 ==========
 4. Type:
 
@@ -32,7 +32,7 @@ If it doesn't start at #1 again, or ask for help before moving on!
 Copy and paste the output of pwd below.
 ----------
 
-
+/Users/student/desktop/mtec1002
 
 ==========
 5. Type:
@@ -43,7 +43,9 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+ent-v314-008:mtec1002 student$ mkdir animals
+ent-v314-008:mtec1002 student$ ls
+animals
 
 ==========
 6. Type:
@@ -54,7 +56,9 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+ent-v314-008:mtec1002 student$ mkdir food
+ent-v314-008:mtec1002 student$ ls
+animal	food
 
 ==========
 7. Type:
@@ -65,7 +69,9 @@ $ ls
 Copy and paste the output below.
 ----------
 
-
+ent-v314-008:mtec1002 student$ mkdir -p foo/bar/baz/qux
+ent-v314-008:mtec1002 student$ ls
+animal	foo	food
 
 ==========
 8. Type:
@@ -76,7 +82,9 @@ $ pwd
 Copy and paste the output below.
 ----------
 
-
+ent-v314-008:mtec1002 student$ cd foo/bar/baz/qux
+ent-v314-008:qux student$ pwd
+/Users/student/desktop/mtec1002/foo/bar/baz/qux
 
 ==========
 9. Type:
@@ -87,7 +95,9 @@ $ pwd
 Copy and paste the output below.
 ----------
 
-
+ent-v314-008:qux student$ cd ../..
+ent-v314-008:bar student$ pwd
+/Users/student/desktop/mtec1002/foo/bar
 
 ==========
 10. Type:
@@ -97,8 +107,10 @@ $ pwd
 
 Copy and paste the output below.
 ----------
-
-
+ent-v314-008:bar student$ cd -
+/Users/student/desktop/mtec1002/foo/bar/baz/qux
+ent-v314-008:qux student$ pwd
+/Users/student/desktop/mtec1002/foo/bar/baz/qux
  
 ==========
 11. Type:
@@ -109,7 +121,9 @@ $ pwd
 Copy and paste the output below.
 ----------
 
-
+ent-v314-008:qux student$ cd ../../../..
+ent-v314-008:mtec1002 student$ pwd
+/Users/student/desktop/mtec1002
 
 ==========
 12. Type:
@@ -121,6 +135,16 @@ $ ls -l
 Copy and paste the first two lines from the output into the space below.
 ----------
 
+ent-v314-008:mtec1002 student$ ls -l
+total 0
+drwxr-xr-x  2 student  staff   68 Oct 23 14:56 animals
+drwxr-xr-x  3 student  staff  102 Oct 23 14:57 foo
+drwxr-xr-x  2 student  staff   68 Oct 23 14:57 food
+ent-v314-008:mtec1002 student$ rmdir animals
+ent-v314-008:mtec1002 student$ ls -l
+total 0
+drwxr-xr-x  3 student  staff  102 Oct 23 14:57 foo
+drwxr-xr-x  2 student  staff   68 Oct 23 14:57 food
 
 
 ==========
@@ -132,7 +156,9 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
-
+ent-v314-008:mtec1002 student$ cd ~
+ent-v314-008:~ student$ pwd
+/Users/student
 
 ==========
 14. Type:
@@ -143,6 +169,9 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
+ent-v314-008:~ student$ cd /Volumes
+ent-v314-008:Volumes student$ pwd
+/Volumes
 
 
 ==========
@@ -154,7 +183,10 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
-
+ent-v314-008:Volumes student$ cd /unknown_folder
+-bash: cd: /unknown_folder: No such file or directory
+ent-v314-008:Volumes student$ pwd
+/Volumes
 
 ==========
 15. Type:
@@ -165,6 +197,7 @@ $ pwd
 Copy and paste the output into the space below.
 ----------
 
+ent-v314-008:Volumes student$ cd ~/mtec1002
 
 
 ==========
@@ -204,7 +237,7 @@ lemon
 Use only one command to make all of these new directories.  Write what command you used below:
 ----------
 
-
+mkdir -p pinapple/orange/strawbery/lemon
 
 ==========
 19. Make another directory called aardvark.  
@@ -212,7 +245,7 @@ Use only one command to make all of these new directories.  Write what command y
 Write the command you used to create the directory below:
 ----------
 
-
+mkdir aardvark
 
 ==========
 20. List the files and directories in the current directory using the long format.  
@@ -220,6 +253,13 @@ Write the command you used to create the directory below:
 What is the modified date of the aardvark directory?
 ----------
 
+total 0
+drwxr-xr-x  6 student  staff  204 Oct 23 15:10 .
+drwxr-xr-x  2 student  staff   68 Oct 23 15:10 aardvark
+drwxr-xr-x  3 student  staff  102 Oct 23 15:10 pinapple
+drwxr-xr-x  3 student  staff  102 Oct 23 14:57 foo
+drwxr-xr-x  2 student  staff   68 Oct 23 14:57 food
+drwx------  9 student  staff  306 Oct 23 14:55 ..
 
 
 ==========
@@ -232,7 +272,7 @@ What is the modified date of the aardvark directory?
 What command did you use?
 ----------
 
-
+mkdir -p foo/bar/baz
 
 ==========
 22. Change your directory so that you're in the inner most directory (baz)
@@ -240,51 +280,52 @@ What command did you use?
 What command did you use?
 ----------
 
-
+cd foo/bar/baz
 
 ==========
 23. Change your directory so that you're two directories up (foo)
 
 What command did you use?
 ----------
-
+cd
 
 ==========
 24. What command is used to delete empty directories?
 ----------
 
-
+rmdir
 
 ==========
 25. What command is used to print out your current working directory?
 ----------
 
-
+pwd
 
 ==========
 26. What flag do I pass to ls to print out all files?
 ----------
 
-
+ls- alt
 
 ==========
 27. What's the shortcut for home directory?
 ----------
 
-
+cd ~
 
 ==========
 28. What's a pathname?
 ----------
 
-
+A pathname is the general form of the name of a file or directory; it specifies a unique location in a file system.
 
 ==========
 29. What's a directory?
 ----------
 
-
+ directory is a cataloging structure on a file system that references other files
 
 ==========
 30. What's the *absolute* path (full path, starting at root) to your user's Downloads directory?
 ----------
+student
